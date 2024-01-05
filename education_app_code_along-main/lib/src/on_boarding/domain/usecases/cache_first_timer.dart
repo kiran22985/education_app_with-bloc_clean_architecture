@@ -1,14 +1,13 @@
-import 'package:education_app/core/utils/typedefs.dart';
-import 'package:education_app/src/on_boarding/domain/repositories/on_boarding_repo.dart';
 
-import '../../../../core/usecases/usecases.dart';
+import 'package:education_app/core/usecases/usecases.dart';
+import 'package:education_app/core/utils/typdefs.dart';
+import 'package:education_app/src/on_boarding/domain/repos/on_boarding_repo.dart';
 
-class CacheFirstTimerUseCase extends UseCaseWithoutParams<void>{
+class CacheFirstTimer extends UsecaseWithoutParams<void> {
+  const CacheFirstTimer(this._repo);
 
-  const CacheFirstTimerUseCase(this._repo);
-  final OnBoardingRepository _repo;
+  final OnBoardingRepo _repo;
 
   @override
-  ResultFuture<void> call() => _repo.cacheFirstTimer();
-
+  ResultFuture<void> call() async => _repo.cacheFirstTimer();
 }

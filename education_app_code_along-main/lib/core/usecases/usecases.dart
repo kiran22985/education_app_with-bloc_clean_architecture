@@ -1,14 +1,13 @@
-import 'package:education_app/core/utils/typedefs.dart';
+import 'package:education_app/core/utils/typdefs.dart';
 
-abstract class UseCaseWithParams<Type, Params>{
-  const UseCaseWithParams();
+abstract class UsecaseWithParams<Type, Params> {
+  const UsecaseWithParams();
 
   ResultFuture<Type> call(Params params);
 }
 
-
-abstract class UseCaseWithoutParams<Type>{
-  const UseCaseWithoutParams();
+abstract class UsecaseWithoutParams<Type> {
+  const UsecaseWithoutParams();
 
   ResultFuture<Type> call();
 }
